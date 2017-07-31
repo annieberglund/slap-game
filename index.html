@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boxing Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link rel="stylesheet" href="game.css">
+    
+</head>
+<body>
+	<div class="game-console">
+   <div class="target-object container">
+        <div class="row text-center green-text">
+            <div class="col-xs-4">
+                <span>Name:<span id="name"></span></span>
+            </div>
+
+            <div class="col-xs-4">
+                <span>Health:<span id="health"></span></span>
+            </div>
+
+            <div class="col-xs-4">
+                <span>Hits:<span id="hits"></span></span>
+            </div>
+        </div>
+
+        <div class="row text-center">
+            <div class="col-xs-12">
+	            <img class="img-responsive img-tyson"src="imgs/tyson-3.jpg" alt="Boxer"></div>
+        </div>
+    </div>
+    
+    <div class="footer container">
+        <div class="row text-center hit-button-row">
+            <div class="col-xs-4">
+                <button type="button" class="hit hit-button" onclick="attack(1)">JAB!</button>
+            </div>
+
+            <div class="col-xs-4">
+                 <button type="button" class="hit hit-button" onclick="attack(5)">HOOK!</button> 
+            </div>
+
+            <div class="col-xs-4">
+                <button type="button" class="hit hit-button" onclick="attack(10)">UPPER<br />CUT!</button>
+            </div>
+        </div>
+            <div id="items" class="row text-center">
+            <div class="col-xs-4">
+                 <button type="button" class="item mod-button" onclick="newAsset('dodge')">DODGE!</button>
+            </div>
+
+            <div class="col-xs-4">
+                  <button type="button" class="item mod-button" onclick="newAsset('block')">BLOCK!</button> 
+            </div>
+
+            <div class="col-xs-4">
+                <button type="button" class="item mod-button text-center" onclick="newAsset('powerGlove')">POWER<br />GLOVE!</button>
+            </div>
+        </div>
+
+        <div class="row text-right">
+            <div class="col-xs-12">
+	            <button type="button" class="new-game" onclick="newGame()">NEW GAME</button>
+	            
+            </div>
+        </div>
+    </div>
+
+	</div>	 
+<script src="game.js"></script>
+
+</body>
+</html>
