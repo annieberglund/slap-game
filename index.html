@@ -36,41 +36,43 @@
     <div class="footer container">
         <div class="row text-center hit-button-row">
             <div class="col-xs-4">
-                <button type="button" class="hit hit-button" onclick="attack(1)">JAB!</button>
+                <button type="button" class="hit hit-button" onclick="app.controllers.gameController.attack(1)">JAB!</button>
             </div>
 
             <div class="col-xs-4">
-                 <button type="button" class="hit hit-button" onclick="attack(5)">HOOK!</button> 
+                 <button type="button" class="hit hit-button" onclick="app.controllers.gameController.attack(5)">HOOK!</button> 
             </div>
 
             <div class="col-xs-4">
-                <button type="button" class="hit hit-button" onclick="attack(10)">UPPER<br />CUT!</button>
+                <button type="button" class="hit hit-button" onclick="app.controllers.gameController.attack(10)">UPPER<br />CUT!</button>
             </div>
         </div>
             <div id="items" class="row text-center">
             <div class="col-xs-4">
-                 <button type="button" class="item mod-button" onclick="newAsset('dodge')">DODGE!</button>
+                 <button type="button" class="item mod-button" onclick="app.controllers.gameController.newAsset('dodge')">DODGE!</button>
             </div>
 
             <div class="col-xs-4">
-                  <button type="button" class="item mod-button" onclick="newAsset('block')">BLOCK!</button> 
+                  <button type="button" class="item mod-button" onclick="app.controllers.gameController.newAsset('block')">BLOCK!</button> 
             </div>
 
             <div class="col-xs-4">
-                <button type="button" class="item mod-button text-center" onclick="newAsset('powerGlove')">POWER<br />GLOVE!</button>
+                <button type="button" class="item mod-button text-center" onclick="app.controllers.gameController.newAsset('powerGlove')">POWER<br />GLOVE!</button>
             </div>
         </div>
 
         <div class="row text-right">
             <div class="col-xs-12">
-	            <button type="button" class="new-game" onclick="newGame()">NEW GAME</button>
+	            <button type="button" class="new-game" onclick="app.controllers.gameController.newGame()">NEW GAME</button>
 	            
             </div>
         </div>
     </div>
 
-	</div>	 
-<script src="game.js"></script>
+    </div>
+        <script src="service.js"></script>
+        <script src="controller.js"></script>
+        <script src="app.js"></script>
 
 </body>
 </html>
