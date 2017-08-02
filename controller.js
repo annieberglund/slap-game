@@ -8,15 +8,17 @@ function update() {
 	document.getElementById("name").textContent = mike.name;
 	document.getElementById("health").textContent = mike.health.toFixed(2);
 	document.getElementById("hits").innerHTML = mike.hits;
+	if (mike.health <= 0) {
+		if (confirm("KNOCKED OUT, SUCKA!") == true) {
+			slapService.newGame();
+			update();
+		} 
+			
+	}
 	console.log(mike);
 }
 
-
-
 //PUBLIC
-
-
-
 
 this.newGame = function newGame() {
 	slapService.newGame();
@@ -36,7 +38,5 @@ this.newAsset = function newAsset(newItem) {
 	console.log("Items from Controller");
 
 }
-
-
 update();
 }
