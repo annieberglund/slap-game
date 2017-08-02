@@ -5,8 +5,10 @@ function GameController() {
 	//PRIVATE
 function update() {
 	var mike = slapService.getMike();
+	document.getElementById("name").textContent = mike.name;
 	document.getElementById("health").textContent = mike.health.toFixed(2);
 	document.getElementById("hits").innerHTML = mike.hits;
+	console.log(mike);
 }
 
 
@@ -17,8 +19,7 @@ function update() {
 
 
 this.newGame = function newGame() {
-	mike.health = 100;
-	mike.hits = 0;
+	slapService.newGame();
 	update();
 
 }

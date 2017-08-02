@@ -1,16 +1,14 @@
 function GameService() {
 //PRIVATE
 console.log("Where are we?");
-var slapService = this;	
-var mike = new Player("Mike Tyson");
+var mike = new Player("Mike Tyson"); 
 
     function Player(name) {
 	this.name = name;
 	this.health = 100;
 	this.hits = 0;
-	this.items = [];
-}
-
+	this.items = []
+	}
 
 
 function Items(asset, modifier, description) {
@@ -38,15 +36,17 @@ function addMods() {
 	} return modTotal;
 }
 
-slapService.attack = function attack(attackDamage) {
+this.attack = function attack(attackDamage) {
 	console.log("Damage from service");
 	mike.health -= attackDamage * addMods();
 	mike.hits += 1;
 
 }
-
-slapService.newAsset = function newAsset(newItem) {
+this.newGame = function newGame() {
+	mike.health = 100;
+	mike.hits = 0;
+}
+this.newAsset = function newAsset(newItem) {
 	mike.items.push(items[newItem]);
 }
-
 }
