@@ -45,6 +45,7 @@ this.attack = function attack(attackDamage) {
 this.newGame = function newGame() {
 	mike.health = 100;
 	mike.hits = 0;
+	mike.items = [];
 }
 this.newAsset = function newAsset(newItem) {
 	mike.items.push(items[newItem]);
